@@ -1,15 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Joshi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yash Joshi portfolio - AI Engineer. Explore projects, skills, experience, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="AI Engineer, Machine Learning, Python, NumPy, Pandas, Portfolio"
+    />
+    <meta name="author" content="Yash Joshi" />
+    <meta property="og:title" content="Yash Joshi | Portfolio" />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Yash Joshi, AI Engineer."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://picsum.photos/1200/630" />
+    <meta name="theme-color" content="#0b0f19" />
+    <title>Yash Joshi | AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="loader" class="loader" role="status" aria-live="polite">
+      <div class="loader__ring"></div>
+      <p>Loading portfolio...</p>
+    </div>
 
-    <h1>Building a life worth living.</h1>
+    <div id="progressBar" aria-hidden="true"></div>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <div id="customCursorDot" aria-hidden="true"></div>
+    <div id="customCursor" aria-hidden="true"></div>
 
-    <script src="script.js"></script>
-</body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="#hero" class="logo">Yash Joshi</a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle dark and light mode"
+        >
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="mainContent">
+      <section id="hero" class="hero section container">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Aspiring AI Engineer</p>
+          <h1>Hi, I am <span class="accent">Yash Joshi</span></h1>
+          <h2>First-Year Student & AI Engineering Enthusiast</h2>
+          <p class="typing-line">
+            <span>I build</span>
+            <span id="typingText" aria-live="polite"></span>
+          </p>
+          <p class="hero__bio">Currently pursuing my first year while learning Python, NumPy, Pandas, and Machine Learning.
+                               I enjoy building projects and continuously improving my skills in AI Engineering.</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#" class="btn btn-secondary">Download Resume</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="orb orb--blue"></div>
+          <div class="orb orb--purple"></div>
+          <div class="glass-card">
+            <p>Crafting modern, performant web experiences.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section container">
+        <h2 class="section-title reveal">About</h2>
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3>Professional Summary</h3>
+            <p>
+              Currently pursuing my first year while learning Python, NumPy, Pandas, and Machine Learning.
+             I enjoy building projects and continuously improving my skills in AI Engineering.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Technologies</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Machine Learning</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>C++</li>
+              <li>DSA</li>
+            </ul>
+          </article>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <h4>AI Engineering Journey</h4>
+            <p>2026 - Present</p>
+            <p>Learning Python, Data Analysis, and Machine Learning while building projects.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="filter-buttons reveal" role="tablist" aria-label="Project category filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+        </div>
+        <!-- <div class="project-grid">
+          <article class="project-card reveal" data-category="frontend">
+            <img src="https://picsum.photos/seed/proj1/600/400" alt="Project preview" loading="lazy" />
+            <div class="project-body">
+              <h3>[ADD PROJECTS] - Project One</h3>
+              <p>High-performance interface with animations and design system.</p>
+              <p class="stack">HTML • CSS • JS</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-secondary">Live Demo</a>
+                <a href="#" class="btn btn-ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="fullstack">
+            <img src="https://picsum.photos/seed/proj2/600/400" alt="Project preview" loading="lazy" />
+            <div class="project-body">
+              <h3>[ADD PROJECTS] - Project Two</h3>
+              <p>Scalable web app with API integration and auth workflow.</p>
+              <p class="stack">JS • API • Database</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-secondary">Live Demo</a>
+                <a href="#" class="btn btn-ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="aiml">
+            <img src="https://picsum.photos/seed/proj3/600/400" alt="Project preview" loading="lazy" />
+            <div class="project-body">
+              <h3>[ADD PROJECTS] - Project Three</h3>
+              <p>AI-assisted tool with prompt workflows and analytics.</p>
+              <p class="stack">Python • ML • UX</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-secondary">Live Demo</a>
+                <a href="#" class="btn btn-ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div> -->
+      </section>
+
+      <section id="skills" class="section container">
+        <h2 class="section-title reveal">Skills</h2>
+        <div class="skills-grid">
+          <article class="card reveal">
+            <h3>Languages</h3>
+            <div class="skill"><span>python</span><div class="bar"><i data-level="95"></i></div></div>
+            <div class="skill"><span>python libraries</span><div class="bar"><i data-level="40"></i></div></div>
+            <div class="skill"><span>C++</span><div class="bar"><i data-level="10"></i></div></div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Tools & AI/ML</h3>
+            <div class="skill"><span>Machine Learning</span><div class="bar"><i data-level="20"></i></div></div>
+            <div class="skill"><span>Deep Learning</span><div class="bar"><i data-level="10"></i></div></div>
+            <div class="skill"><span>AI Workflows</span><div class="bar"><i data-level="30"></i></div></div>
+            <div class="skill"><span>Git & GitHub</span><div class="bar"><i data-level="80"></i></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section container">
+        <h2 class="section-title reveal">Experience & Education</h2>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <h4>Graphic era hill University</h4>
+            <p>2026 - 2030</p>
+            <p>B.Tech in CSE ( AI & ML )</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2 class="section-title reveal">Contact</h2>
+        <div class="contact-grid">
+          <form class="card reveal contact-form" aria-label="Contact form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+          <article class="card reveal contact-links">
+            <h3>Connect</h3>
+            <a href="mailto:yashjoshiglobal@gmail.com"><b>Email:</b> yashjoshiglobal@gmail.com</a>
+
+            <a href="https://github.com/yashgit-bit" target="_blank" rel="noopener noreferrer">
+               <b>GitHub:</b> @yashgit-bit
+            </a>
+
+            <a href="https://www.linkedin.com/in/yashjoshiglobal/" target="_blank" rel="noopener noreferrer">
+               <b>LinkedIn:</b> @yashjoshiglobal
+            </a>
+
+
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Yash Joshi. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
+
