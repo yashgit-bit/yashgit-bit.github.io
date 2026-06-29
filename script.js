@@ -1,8 +1,8 @@
 const state = {
   typingWords: [
-    "beautiful user interfaces.",
-    "fast, scalable web apps.",
-    "premium digital experiences.",
+    "machine learning models.",
+    "data analysis projects.",
+    "AI-powered applications.",
   ],
 };
 
@@ -12,11 +12,9 @@ const els = {
   typingText: document.getElementById("typingText"),
   navToggle: document.getElementById("navToggle"),
   navLinks: document.getElementById("navLinks"),
-  themeToggle: document.getElementById("themeToggle"),
   year: document.getElementById("year"),
   cursorBubble: document.getElementById("customCursor"),
   cursorDot: document.getElementById("customCursorDot"),
-  particleCanvas: document.getElementById("particleCanvas"),
   filterBtns: document.querySelectorAll(".filter-btn"),
   projectCards: document.querySelectorAll(".project-card"),
   revealNodes: document.querySelectorAll(".reveal"),
@@ -27,7 +25,7 @@ function runLoader() {
   window.addEventListener("load", () => {
     setTimeout(() => {
       els.loader?.classList.add("hidden");
-    }, 900);
+    }, 700);
   });
 }
 
@@ -64,25 +62,6 @@ function setupTypingEffect() {
   step();
 }
 
-function setupThemeToggle() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") document.body.classList.add("light");
-  updateThemeIcon();
-
-  els.themeToggle?.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    const theme = document.body.classList.contains("light") ? "light" : "dark";
-    localStorage.setItem("theme", theme);
-    updateThemeIcon();
-  });
-
-  function updateThemeIcon() {
-    const icon = els.themeToggle?.querySelector(".theme-toggle__icon");
-    if (!icon) return;
-    icon.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-  }
-}
-
 function setupMobileNav() {
   els.navToggle?.addEventListener("click", () => {
     const expanded = els.navToggle.getAttribute("aria-expanded") === "true";
@@ -104,22 +83,13 @@ function setupRevealAnimations() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
-          if (entry.target.matches(".card")) animateSkillBars(entry.target);
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12 }
   );
 
   els.revealNodes.forEach((node) => io.observe(node));
-}
-
-function animateSkillBars(container) {
-  container.querySelectorAll(".bar i").forEach((bar) => {
-    const level = bar.dataset.level || "0";
-    if (bar.style.width) return;
-    bar.style.width = `${level}%`;
-  });
 }
 
 function setupProjectFilters() {
@@ -132,7 +102,7 @@ function setupProjectFilters() {
       els.projectCards.forEach((card) => {
         const category = card.dataset.category;
         const visible = filter === "all" || filter === category;
-        card.style.display = visible ? "block" : "none";
+        card.style.display = visible ? "flex" : "none";
       });
     });
   });
@@ -164,7 +134,7 @@ function setupActiveSectionHighlight() {
         navMap[id]?.classList.add("active");
       });
     },
-    { threshold: 0.55 }
+    { threshold: 0.45 }
   );
 
   els.sectionNodes.forEach((section) => sectionObserver.observe(section));
@@ -226,73 +196,28 @@ function setupCustomCursor() {
   });
 }
 
-function setupParticleBackground() {
-  const canvas = els.particleCanvas;
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
-
-  let particles = [];
-  const particleCount = 56;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particles = Array.from({ length: particleCount }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 1.6 + 0.6,
-    }));
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const light = document.body.classList.contains("light");
-    const color = light ? "rgba(45, 102, 210, 0.45)" : "rgba(152, 189, 255, 0.55)";
-
-    particles.forEach((p) => {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = color;
-      ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-
-  resize();
-  draw();
-  window.addEventListener("resize", resize);
-}
-
 function setupContactForm() {
   const form = document.querySelector(".contact-form");
   form?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const email = document.getElementById("email")?.value || "[YOUR EMAIL]";
+    const visitorEmail = document.getElementById("email")?.value || "";
     const message = document.getElementById("message")?.value || "";
     const name = document.getElementById("name")?.value || "Portfolio Visitor";
     const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(message);
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    const body = encodeURIComponent(
+      `${message}\n\n— ${name}${visitorEmail ? ` (${visitorEmail})` : ""}`
+    );
+    window.location.href = `mailto:yashjoshiglobal@gmail.com?subject=${subject}&body=${body}`;
   });
 }
 
 runLoader();
 setYear();
 setupTypingEffect();
-setupThemeToggle();
 setupMobileNav();
 setupRevealAnimations();
 setupProjectFilters();
 setupScrollProgress();
 setupActiveSectionHighlight();
 setupCustomCursor();
-setupParticleBackground();
 setupContactForm();
-
