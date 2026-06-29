@@ -1,326 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Yash Joshi — Aspiring AI Engineer portfolio. Python, Machine Learning, Data Science, Streamlit projects, and skills in AI Engineering."
-    />
-    <meta
-      name="keywords"
-      content="AI Engineer, Machine Learning, Python, Portfolio, Data Science, Streamlit, NumPy, Pandas, Scikit-learn, Yash Joshi"
-    />
-    <meta name="author" content="Yash Joshi" />
-    <meta property="og:title" content="Yash Joshi | Aspiring AI Engineer Portfolio" />
-    <meta
-      property="og:description"
-      content="Portfolio of Yash Joshi — aspiring AI Engineer building Python, Machine Learning, Data Science, and Streamlit projects."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://picsum.photos/1200/630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Yash Joshi | Aspiring AI Engineer Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Aspiring AI Engineer portfolio — Python, Machine Learning, Data Science, Streamlit apps, and AI/ML projects."
-    />
-    <meta name="theme-color" content="#050505" />
-    <title>Yash Joshi | Aspiring AI Engineer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div id="loader" class="loader" role="status" aria-live="polite">
-      <div class="loader__ring"></div>
-      <p>Loading portfolio...</p>
-    </div>
 
-    <div id="progressBar" aria-hidden="true"></div>
-    <div id="customCursorDot" aria-hidden="true"></div>
-    <div id="customCursor" aria-hidden="true"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Yash Joshi — Aspiring AI Engineer portfolio. Python, Machine Learning, Data Science, Streamlit projects, and skills in AI Engineering." />
+  <meta name="keywords"
+    content="AI Engineer, Machine Learning, Python, Portfolio, Data Science, Streamlit, NumPy, Pandas, Scikit-learn, Yash Joshi" />
+  <meta name="author" content="Yash Joshi" />
+  <meta property="og:title" content="Yash Joshi | Aspiring AI Engineer Portfolio" />
+  <meta property="og:description"
+    content="Portfolio of Yash Joshi — aspiring AI Engineer building Python, Machine Learning, Data Science, and Streamlit projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/1200/630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yash Joshi | Aspiring AI Engineer Portfolio" />
+  <meta name="twitter:description"
+    content="Aspiring AI Engineer portfolio — Python, Machine Learning, Data Science, Streamlit apps, and AI/ML projects." />
+  <meta name="theme-color" content="#050505" />
+  <title>Yash Joshi | Aspiring AI Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
 
-    <header class="site-header">
-      <nav class="nav container">
-        <a href="#hero" class="logo">Yash Joshi</a>
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="navLinks"
-        >
-          <span></span><span></span><span></span>
-        </button>
-        <ul id="navLinks" class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <div class="loader__ring"></div>
+    <p>Loading portfolio...</p>
+  </div>
 
-    <main id="mainContent">
-      <section id="hero" class="hero section container">
-        <div class="hero__content reveal">
-          <p class="eyebrow">Aspiring AI Engineer</p>
-          <h1>Hi, I am <span class="accent">Yash Joshi</span></h1>
-          <h2>First-Year Undergraduate Student &amp; AI Enthusiast</h2>
-          <p class="typing-line">
-            <span>I build</span>
-            <span id="typingText" aria-live="polite"></span>
-          </p>
-          <p class="hero__bio">
-            First-year undergraduate student focused on AI Engineering, Machine Learning,
-            Data Science, and building impactful projects.
-          </p>
-          <div class="hero__cta">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#" class="btn btn-secondary">Download Resume</a>
-            <a href="#contact" class="btn btn-ghost">Contact Me</a>
-          </div>
+  <div id="progressBar" aria-hidden="true"></div>
+  <div id="customCursorDot" aria-hidden="true"></div>
+  <div id="customCursor" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="logo">Yash Joshi</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section id="hero" class="hero section container">
+      <div class="hero__content reveal">
+        <p class="eyebrow">Aspiring AI Engineer</p>
+        <h1>Hi, I am <span class="accent">Yash Joshi</span></h1>
+        <h2>First-Year Undergraduate Student &amp; AI Enthusiast</h2>
+        <p class="typing-line">
+          <span>I build</span>
+          <span id="typingText" aria-live="polite"></span>
+        </p>
+        <p class="hero__bio">
+          First-year undergraduate student focused on AI Engineering, Machine Learning,
+          Data Science, and building impactful projects.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#" class="btn btn-secondary">Download Resume</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
         </div>
-        <div class="hero__visual reveal">
-          <div class="glass-card">
-            <p>Building with Python, Machine Learning, and Streamlit — one project at a time.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section container">
-        <h2 class="section-title reveal">About</h2>
-        <div class="about-grid">
-          <article class="card reveal">
-            <h3>Professional Summary</h3>
-            <p>
-              I am at the beginning of my AI Engineering journey as a first-year undergraduate
-              student. I am building a foundation in Python, data analysis, and machine learning
-              through consistent learning and hands-on projects. I focus on understanding how
-              data, models, and code work together, with the long-term goal of building impactful
-              AI products in areas like automation, data science, and intelligent systems.
-            </p>
-          </article>
-          <article class="card reveal">
-            <h3>Technologies</h3>
-            <ul class="chips">
-              <li>Python</li>
-              <li>NumPy</li>
-              <li>Pandas</li>
-              <li>Scikit-learn</li>
-              <li>Streamlit</li>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-        </div>
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <h4>Learning &amp; Building</h4>
-            <p>2026 - Present</p>
-            <p>
-              Studying AI Engineering fundamentals, exploring datasets, and working on beginner
-              ML and data analysis projects to strengthen practical skills.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section container">
-        <h2 class="section-title reveal">Projects</h2>
-        <div class="filter-buttons reveal" role="tablist" aria-label="Project category filters">
-          <button class="filter-btn active" data-filter="all" type="button">All</button>
-        </div>
-        <div class="project-grid">
-          <article class="project-card project-card--featured reveal" data-category="aiml">
-            <img src="https://picsum.photos/seed/movie-rec/600/400" alt="Movie Recommendation System project preview" loading="lazy" />
-            <div class="project-body">
-              <span class="project-badge">Live Project</span>
-              <h3>Movie Recommendation System</h3>
-              <p>
-                An AI-powered movie recommendation system built using Machine Learning and
-                Streamlit that suggests movies based on user preferences.
-              </p>
-              <p class="stack">Python • Scikit-learn • Streamlit • Machine Learning</p>
-              <div class="project-actions">
-                <a
-                  href="https://movie-recommender-by-yash.streamlit.app/"
-                  class="btn btn-demo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
-                  Live Demo
-                </a>
-                <a
-                  href="https://github.com/yashgit-bit/movie-recommender-system"
-                  class="btn btn-github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.8c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/>
-                  </svg>
-                  GitHub Repo
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal" data-category="aiml">
-            <img src="https://picsum.photos/seed/proj2/600/400" alt="House Price Prediction Model project preview" loading="lazy" />
-            <div class="project-body">
-              <h3>House Price Prediction Model</h3>
-              <p>
-                A regression-based model that predicts house prices from features like location,
-                size, and amenities to practice supervised learning workflows.
-              </p>
-              <p class="stack">Python • NumPy • Scikit-learn</p>
-              <div class="project-actions">
-                <a href="#" class="btn btn-secondary">Live Demo</a>
-                <a href="#" class="btn btn-ghost">GitHub</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal" data-category="aiml">
-            <img src="https://picsum.photos/seed/proj3/600/400" alt="Student Performance Analysis project preview" loading="lazy" />
-            <div class="project-body">
-              <h3>Student Performance Analysis</h3>
-              <p>
-                A data analysis project that explores student study habits and scores to uncover
-                patterns, trends, and insights using Pandas and visualizations.
-              </p>
-              <p class="stack">Python • Pandas • Data Analysis</p>
-              <div class="project-actions">
-                <a href="#" class="btn btn-secondary">Live Demo</a>
-                <a href="#" class="btn btn-ghost">GitHub</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section container">
-        <h2 class="section-title reveal">Skills</h2>
-        <div class="skills-grid">
-          <article class="card skill-card reveal">
-            <h3>Core</h3>
-            <ul class="chips">
-              <li>Python</li>
-              <li>NumPy</li>
-              <li>Pandas</li>
-              <li>Scikit-learn</li>
-              <li>Machine Learning</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3>Programming</h3>
-            <ul class="chips">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3>Tools</h3>
-            <ul class="chips">
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Streamlit</li>
-              <li>VS Code</li>
-            </ul>
-          </article>
-
-          <article class="card skill-card reveal">
-            <h3>Learning</h3>
-            <ul class="chips">
-              <li>Data Structures</li>
-              <li>Data Analysis</li>
-              <li>AI Engineering</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="section container">
-        <h2 class="section-title reveal">Experience & Education</h2>
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <h4>First-Year Undergraduate Student</h4>
-            <p>2026 - Present</p>
-            <p>
-              Pursuing B.Tech in CSE (AI &amp; ML) at Graphic Era Hill University while building
-              foundational skills in AI Engineering, programming, and data science.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h4>Learning Journey</h4>
-            <p>2026 - Present</p>
-            <p>
-              Self-directed learning in Python, NumPy, Pandas, Scikit-learn, Machine Learning,
-              Streamlit, Git, and GitHub through online resources, coursework, and hands-on projects.
-            </p>
-          </div>
-          <div class="timeline-item">
-            <h4>Currently No Professional Experience</h4>
-            <p>—</p>
-            <p>
-              I am early in my career and focused on learning, building projects, and preparing
-              for future internships and AI Engineering opportunities.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section container">
-        <h2 class="section-title reveal">Contact</h2>
-        <div class="contact-grid">
-          <form class="card reveal contact-form" aria-label="Contact form">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="your@email.com" required />
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-            <button class="btn btn-primary" type="submit">Send Message</button>
-          </form>
-          <article class="card reveal contact-links">
-            <h3>Connect</h3>
-            <a href="mailto:yashjoshiglobal@gmail.com"><b>Email:</b> yashjoshiglobal@gmail.com</a>
-
-            <a href="https://github.com/yashgit-bit" target="_blank" rel="noopener noreferrer">
-               <b>GitHub:</b> @yashgit-bit
-            </a>
-
-            <a href="https://www.linkedin.com/in/yashjoshiglobal/" target="_blank" rel="noopener noreferrer">
-              <b>LinkedIn:</b> @yashjoshiglobal
-            </a>
-            <p><b>Twitter/X:</b> Coming Soon</p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; <span id="year"></span> Yash Joshi. All rights reserved.</p>
       </div>
-    </footer>
-  </body>
-</html>
+    </section>
 
+    <section id="about" class="section container">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-grid">
+        <article class="card reveal">
+          <h3>Professional Summary</h3>
+          <p>
+            I am at the beginning of my AI Engineering journey as a first-year undergraduate
+            student. I am building a foundation in Python, data analysis, and machine learning
+            through consistent learning and hands-on projects. I focus on understanding how
+            data, models, and code work together, with the long-term goal of building impactful
+            AI products in areas like automation, data science, and intelligent systems.
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>Technologies</h3>
+          <ul class="chips">
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>Scikit-learn</li>
+            <li>Streamlit</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <h4>Learning &amp; Building</h4>
+          <p>2026 - Present</p>
+          <p>
+            Studying AI Engineering fundamentals, exploring datasets, and working on beginner
+            ML and data analysis projects to strengthen practical skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="project-grid">
+        <article class="project-card project-card--featured reveal" data-category="aiml">
+          <img src="assets/images/movie-recommender-preview.png" alt="Movie Recommendation System preview"
+            loading="lazy" />
+          ```
+          <div class="project-body">
+            <span class="project-badge">Featured Project</span>
+
+            <h3>Movie Recommendation System</h3>
+
+            <p>
+              An AI-powered movie recommendation system built using Machine Learning
+              and Streamlit that suggests movies based on user preferences.
+            </p>
+
+            <p class="stack">
+              Python • Scikit-learn • Streamlit • Machine Learning
+            </p>
+
+            <div class="project-actions">
+              <a href="https://movie-recommender-by-yash.streamlit.app/" class="btn btn-demo" target="_blank"
+                rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Live Demo
+              </a>
+
+              <a href="https://github.com/yashgit-bit/movie-recommender-system" class="btn btn-github" target="_blank"
+                rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+          0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756
+          -1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 
+          3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 
+          0-1.31.465-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 
+          0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.8c1.02.005 2.047.138 
+          3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 
+          3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 
+          5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 
+          3.286 0 .315.21.694.825.576C20.565 21.795 24 17.295 24 
+          12 24 5.37 18.63 0 12 0z" />
+                </svg>
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </article>
+        ```
+
+      </div>
+    </section>
+
+
+    <section id="skills" class="section container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-grid">
+        <article class="card skill-card reveal">
+          <h3>Core</h3>
+          <ul class="chips">
+            <li>Python</li>
+            <li>NumPy</li>
+            <li>Pandas</li>
+            <li>Scikit-learn</li>
+            <li>Machine Learning</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h3>Programming</h3>
+          <ul class="chips">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h3>Tools</h3>
+          <ul class="chips">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Streamlit</li>
+            <li>VS Code</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card reveal">
+          <h3>Learning</h3>
+          <ul class="chips">
+            <li>Data Structures</li>
+            <li>Data Analysis</li>
+            <li>AI Engineering</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2 class="section-title reveal">Experience & Education</h2>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <h4>First-Year Undergraduate Student</h4>
+          <p>2026 - Present</p>
+          <p>
+            Pursuing B.Tech in CSE (AI &amp; ML) at Graphic Era Hill University while building
+            foundational skills in AI Engineering, programming, and data science.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h4>Learning Journey</h4>
+          <p>2026 - Present</p>
+          <p>
+            Self-directed learning in Python, NumPy, Pandas, Scikit-learn, Machine Learning,
+            Streamlit, Git, and GitHub through online resources, coursework, and hands-on projects.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h4>Currently No Professional Experience</h4>
+          <p>—</p>
+          <p>
+            I am early in my career and focused on learning, building projects, and preparing
+            for future internships and AI Engineering opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title reveal">Contact</h2>
+      <div class="contact-grid">
+        <form class="card reveal contact-form" aria-label="Contact form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="your@email.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+        <article class="card reveal contact-links">
+          <h3>Connect</h3>
+          <a href="mailto:yashjoshiglobal@gmail.com"><b>Email:</b> yashjoshiglobal@gmail.com</a>
+
+          <a href="https://github.com/yashgit-bit" target="_blank" rel="noopener noreferrer">
+            <b>GitHub:</b> @yashgit-bit
+          </a>
+
+          <a href="https://www.linkedin.com/in/yashjoshiglobal/" target="_blank" rel="noopener noreferrer">
+            <b>LinkedIn:</b> @yashjoshiglobal
+          </a>
+          <p><b>Twitter/X:</b> Coming Soon</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Yash Joshi. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
